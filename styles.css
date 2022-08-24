@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+* {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin: auto;
+}
+
+li a {
+  display: flex;
+  text-decoration: none;
+  color: #ffffff;
+  border: 2px solid rgba(234, 206, 25, 0.5450980392);
+  border-radius: 18px;
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0.6980392157);
+}
+
+li a:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgba(216, 152, 78, 0.495);
+}
+
+img {
+  width: 100%;
+}
+
+h2 {
+  font-size: 40px;
+  color: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-family: "Anton", sans-serif;
+  font-size: 4em;
+  color: rgb(255, 209, 2);
+}
+body .parallax_wrapper {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 300px;
+}
+body .parallax_wrapper .intro_screen {
+  height: 100vh;
+  background-image: url("./assets/felix-mittermeier_Big.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .parallax_wrapper .outro_screen {
+  height: 100vh;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .parallax_wrapper .parallax_group {
+  position: relative;
+  height: 100vh;
+  transform-style: preserve-3d;
+}
+body .parallax_wrapper .parallax_group .parallax_layer {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .parallax_wrapper .parallax_group .base_layer {
+  transform: translateZ(-300px) scale(2);
+}
+body .parallax_wrapper .parallax_group .mid_layer {
+  transform: translateZ(0);
+}
+body .parallax_wrapper .parallax_group .top_layer {
+  transform: translateZ(210px) scale(0.3);
+}
+body .parallax_wrapper #intro {
+  z-index: 0;
+}
+body .parallax_wrapper #group-1 {
+  z-index: -1;
+}
+body .parallax_wrapper #group-1 > .base_layer {
+  background-color: black;
+}
+body .parallax_wrapper #group-2 > .mid_layer {
+  background-image: url("./assets/felix-mittermeier_Big.jpg");
+}
+/*IMAGE DIMENSIONS*/
+.intro_img_container {
+  width: 800px;
+}
+
+.top_img_container {
+  width: 200px;
+}
+
+.base_img_container {
+  width: 3000px;
+}
+
+.mid_img_container {
+  width: 300px;
+}
+
+.outro_img_container {
+  width: 800px;
+}/*# sourceMappingURL=styles.css.map */
